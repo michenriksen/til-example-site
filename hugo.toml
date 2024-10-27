@@ -1,0 +1,50 @@
+baseURL = 'https://michenriksen.com/til-example-site/'
+languageCode = 'en-us'
+title = 'Today I Learned'
+copyright = 'Michael Henriksen'
+enableRobotsTXT = true
+
+[module]
+  [[module.imports]]
+    path = "github.com/michenriksen/hugo-theme-til"
+
+[outputs]
+  home = ['html']
+  section = ['html', 'rss', 'json']
+  page = ['html']
+
+[menus]
+  [[menus.main]]
+    name = 'Notes'
+    pageRef = '/notes'
+    weight = 20
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 30
+  [[menus.main]]
+    name = 'Graph'
+    pageRef = '/graph'
+    weight = 40
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    style = 'tokyonight-night'
+
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+
+[params]
+  [params.author]
+    name = 'Michael Henriksen'
+    email = 'mchnrksn@gmail.com'
+
+  [params.footer]
+    creativeCommonsLicense = 'by_sa'
+
+  [params.robotstxt]
+    blockCC = true
+    blockAI = true
