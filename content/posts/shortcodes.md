@@ -14,11 +14,12 @@ The backlink shortcode lets you create special links between related posts and n
 links, they also signal the graph feature to connect these items.
 
 ```markdown
-{{</* backlink FILE [LINK TEXT] */>}}
+{{</* backlink BASENAME [LINK TEXT] */>}}
 ```
 
-Provide the base filename (without extension) as the first argument, and an optional second argument for custom link
-text. If the second argument is omitted, the link defaults to the title of the linked page.
+Provide the [content base name](https://gohugo.io/methods/page/file/#contentbasename) as the first argument, and an
+optional second argument for custom link text. If the second argument is omitted, the link defaults to the title of
+the linked page.
 
 ### Example usage
 
